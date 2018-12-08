@@ -1,5 +1,7 @@
 ## Youtube Clone - Work in Progress
 
+### NOTE: you need a youtube api key to perform the search. Add it to API_KEY in index.js
+
 This React front end project shows a simple clone of Youtube making use of the Youtube search API. 
 
 
