@@ -1,12 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import YTSearch from "youtube-api-search";
+import SearchBar from "./components/searchbar";
+import VideoList from './components/videoList'
+import VideoDetail from "./components/videoDetail";
+const API_KEY = "AIzaSyCiq6KWB9JfKvabI3M6HDMUqLMLcsSxlt8";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    this.state = { 
+        videos: [],
+        selectedVideo: null,
+     };
+
+    YTSearch({ key: API_KEY, term: "surfboards" }, videos => {
+      this.setState({ 
+          videos: videos,
+          selectedVideo: videos[0]
+        });
+    });
+  }
+  render() {
+    return (
+      <div>
+        <SearchBar />
+        <VideoDetail video={this.state.selectedVideo}/>
+        <VideoList videos={this.state.videos}  />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
