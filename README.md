@@ -1,3 +1,8 @@
+## Youtube Clone - Work in Progress
+
+This React front end project shows a simple clone of Youtube making use of the Youtube search API. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
