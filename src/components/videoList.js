@@ -10,7 +10,7 @@ const VideoList = (props) => {
         />
     })
     return (
-        <ul className="col-md-4 list-group">
+        <ul className="col s4 grey lighten-5">
         {videoItems}
         </ul>
     )
