@@ -1,4 +1,4 @@
-## Youtube Clone - Work in Progress
+## Minimal Youtube Clone - Work in Progress
 
 ### NOTE: you need a youtube api key to perform the search. Add it to API_KEY in index.js
 
