@@ -8,6 +8,7 @@ class SearchBar extends Component {
   render() {
     return (
         <div className="search-bar">
+        <h5>Search: </h5>
       <input
         value={this.state.term}
         onChange={e => {
