@@ -2,13 +2,17 @@ body {
   margin-left: 20px;
 }
 
+ul {
+  margin-top: 0;
+}
+
 .search-bar {
-  margin: 20px;
+  margin: 30px;
   text-align: center;
 }
 
 .search-bar input {
-  width: 75%;
+  width: 65%;
 }
 
 .video-item img {
@@ -29,7 +33,8 @@ body {
 .list-group-item:hover {
   background-color: #eee;
 }
-.embed-responsive-item {
-  max-width: 80%;
-  align-items: center;
+
+.thumbnail {
+  width: 150px;
+
 }
